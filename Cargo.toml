@@ -1,6 +1,6 @@
 [package]
 name = "setwallpaper"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Dave Nicholson <me@davenicholson.xyz>"]
 edition = "2021"
 description = "A library to set wallpapers on linux, mac and windows from a file name."
