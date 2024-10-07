@@ -1,4 +1,3 @@
-use anyhow::Result;
 use std::ffi::OsStr;
 use std::iter;
 use std::os::windows::ffi::OsStrExt;
@@ -11,7 +10,7 @@ use winreg::enums::*;
 use winreg::RegKey;
 
 // completely stolen from https://github.com/reujab/wallpaper.rs/blob/master/src/windows.rs
-pub fn set_wallpaper(filepath: &str) -> Result<()> {
+pub fn set_wallpaper(filepath: &str) -> Result<(), std::io::Error> {
     let hkcu = RegKey::predef(HKEY_CURRENT_USER);
     let (desktop, _) = hkcu.create_subkey(r"Control Panel\Desktop")?;
 
