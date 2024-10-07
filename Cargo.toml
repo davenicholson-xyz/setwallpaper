@@ -1,0 +1,23 @@
+[package]
+name = "setwallpaper"
+version = "0.1.0"
+authors = ["Dave Nicholson <me@davenicholson.xyz>"]
+edition = "2021"
+description = "A library to set wallpapers on linux, mac and windows from a file name."
+homepage = "https://github.com/davenicholson-xyz/setwallpaper"
+repository = "https://github.com/davenicholson-xyz/setwallpaper"
+license = "MIT"
+
+[dependencies]
+serde = { version = "1.0.210", features = ["derive"] }
+toml = "0.8.19"
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3.9", features = ["winuser"] }
+winreg = "0.52.0"
+
+[lib]
+name = "setwallpaper"
+path = "src/lib.rs"
+
+
